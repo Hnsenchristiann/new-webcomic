@@ -1,9 +1,11 @@
 <template>
     <div class="scrolling-wrapper">
         <div v-for="item in content" class="w-12 card scroller-container mr-1 bg-gradient-to-t from-indigo-900 to-indigo-400" :key="item.index">
-            <div class="text-sm p-2 image scroller-block text-white flex flex-col justify-end" :style="'background-image:linear-gradient(to bottom, rgba(245, 246, 252, 0), rgb(0 0 0 / 73%)), url(' + item.image + ');'">
-                {{item.title}}
-            </div>
+            <router-link to="/comic">
+                <div class="text-sm p-2 image scroller-block text-white flex flex-col justify-end" :style="'background-image:linear-gradient(to bottom, rgba(245, 246, 252, 0), rgb(0 0 0 / 73%)), url(' + item.image + ');'">
+                    {{item.title}}
+                </div>
+            </router-link>
         </div>
     </div>
 </template>

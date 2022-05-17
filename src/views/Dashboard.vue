@@ -1,21 +1,49 @@
 <template>
     <div class="pa-2 w-full">
-        <div class="px-5 py-5 bg-gray-100">
-            <div class="mb-3">
-                <div class="flex items-center justify-between">
-                    <div>All Comics</div>
-                    <div>More</div>
-                </div>
-                <horizontal-slider :content="comics"/>
-            </div>
+        <div class="flex flex-col justify-end items-center bg-blue-100 w-150 h-40 featured-block w-full h-screen-navbar sm:h-96">
+            <banner-slider
+                :banners="banners"
+            ></banner-slider>
         </div>
-        <div class="px-5 py-5 bg-gray-100">
-            <div class="mb-3">
-                <div class="flex items-center justify-between">
-                    <div>Authors</div>
-                    <div>More</div>
+        <div class="text-white bg-gradient-to-t to-indigo-900 from-purple-900">
+            <div class="px-5 py-5">
+                <div class="mb-3">
+                    <div class="flex items-center justify-between">
+                        <div>All Comics</div>
+                        <div>More</div>
+                    </div>
+                    <horizontal-slider :content="comics"/>
                 </div>
-                <horizontal-slider :content="authors"/>
+            </div>
+
+            <div class="px-5 py-5">
+                <div class="mb-3">
+                    <div class="flex items-center justify-between">
+                        <div>Adventure</div>
+                        <div>More</div>
+                    </div>
+                    <horizontal-slider :content="comics"/>
+                </div>
+            </div>
+
+            <div class="px-5 py-5">
+                <div class="mb-3">
+                    <div class="flex items-center justify-between">
+                        <div>Science Fiction</div>
+                        <div>More</div>
+                    </div>
+                    <horizontal-slider :content="comics"/>
+                </div>
+            </div>
+
+            <div class="px-5 py-5">
+                <div class="mb-3">
+                    <div class="flex items-center justify-between">
+                        <div>Authors</div>
+                        <div>More</div>
+                    </div>
+                    <horizontal-slider :content="authors"/>
+                </div>
             </div>
         </div>
     </div>
@@ -23,6 +51,7 @@
 
 <script>
 import HorizontalSlider from '../components/HorizontalSlider.vue'
+import BannerSlider from '../components/BannerSlider.vue'
 // import Grid from '../Components/Grid.vue'
 // import AppLayout from '@/Layouts/AppLayout.vue'
 // import Banner from '../Components/Banner.vue'
@@ -32,6 +61,7 @@ export default {
     name: 'dash-board',
     components: {
         HorizontalSlider,
+        BannerSlider,
         // AppLayout,
         // Banner,
         // Grid,
