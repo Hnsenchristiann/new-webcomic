@@ -1,6 +1,6 @@
 <template>  
     <div>
-        <div class="description-block text-white flex flex-col justify-end p-5" :style="'background-image:linear-gradient(to bottom, rgba(245, 246, 252, 0), rgb(0 0 0 / 73%)), url(' + comics + ');'"><!-- top block -->
+        <div class="text-left pt-64 description-block text-white flex flex-col justify-end p-5" :style="'background-image:linear-gradient(to bottom, rgba(245, 246, 252, 0), rgb(0 0 0 / 73%)), url(' + comics + ');'"><!-- top block -->
             <div>
                 <template v-for="(genre, idx) in genres" :key="'genre-' + idx">
                     <div>{{genre.title}}</div>
@@ -57,7 +57,7 @@
                     <img class="h-full w-full" :src="chapter.image_url" alt="">
                 </div>
                 <!-- <div class="flex-grow flex flex-col p-3 w-2/5 lg:w-2" @click="goToChapter(chapter.id)"> -->
-                <div class="flex-grow flex flex-col py-3 pl-3 w-2/5 lg:w-2">
+                <div class="flex-grow text-left flex flex-col py-3 pl-3 w-2/5 lg:w-2">
                     <div class="w-100">
                         <span class="text-sm">Ep. {{chapter.chapter}}</span>
                         <span class="text-xs ml-2">{{chapter.release_date}}</span>

@@ -12,7 +12,12 @@
                         <div>All Comics</div>
                         <div>More</div>
                     </div>
-                    <horizontal-slider :content="comics"/>
+                    <mq-responsive target="sm-" tag="span">
+                        <horizontal-slider :content="comics"/>
+                    </mq-responsive>
+                    <mq-responsive target="md+" tag="span">
+                        <grid-show :items="comics"/>
+                    </mq-responsive>
                 </div>
             </div>
 
@@ -22,7 +27,12 @@
                         <div>Adventure</div>
                         <div>More</div>
                     </div>
-                    <horizontal-slider :content="comics"/>
+                    <mq-responsive target="sm-" tag="span">
+                        <horizontal-slider :content="comics"/>
+                    </mq-responsive>
+                    <mq-responsive target="md+" tag="span">
+                        <grid-show :items="comics"/>
+                    </mq-responsive>
                 </div>
             </div>
 
@@ -32,7 +42,12 @@
                         <div>Science Fiction</div>
                         <div>More</div>
                     </div>
-                    <horizontal-slider :content="comics"/>
+                    <mq-responsive target="sm-" tag="span">
+                        <horizontal-slider :content="comics"/>
+                    </mq-responsive>
+                    <mq-responsive target="md+" tag="span">
+                        <grid-show :items="comics"/>
+                    </mq-responsive>
                 </div>
             </div>
 
@@ -42,7 +57,12 @@
                         <div>Authors</div>
                         <div>More</div>
                     </div>
-                    <horizontal-slider :content="authors"/>
+                    <mq-responsive target="sm-" tag="span">
+                        <horizontal-slider :content="comics"/>
+                    </mq-responsive>
+                    <mq-responsive target="md+" tag="span">
+                        <grid-show :items="comics"/>
+                    </mq-responsive>
                 </div>
             </div>
         </div>
@@ -51,6 +71,7 @@
 
 <script>
 import HorizontalSlider from '../components/HorizontalSlider.vue'
+import GridShow from '../components/GridShow.vue'
 import BannerSlider from '../components/BannerSlider.vue'
 // import Grid from '../Components/Grid.vue'
 // import AppLayout from '@/Layouts/AppLayout.vue'
@@ -62,6 +83,7 @@ export default {
     components: {
         HorizontalSlider,
         BannerSlider,
+        GridShow,
         // AppLayout,
         // Banner,
         // Grid,
